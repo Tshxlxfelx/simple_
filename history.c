@@ -56,7 +56,7 @@ return (1);
 int read_history(info_t *info)
 {
 int i, last = 0, linecount = 0;
-int fd, rdlen;
+int fd, rdlen, fsize;
 struct stat st;
 char *buf = NULL;
 char *filename = get_history_file(info);
@@ -113,13 +113,15 @@ renumber_history(info);
 return (info->histcount);
 }
 /**
- * build_history_list - adds entry to a history linked list
+ * build_history_list - adds entry to history linked list
  * @info: Structure containing potential arguments. Used to maintain
  * @buf: buffer
  * @linecount: the history linecount, histcount
  *
  * Return: Always 0
  */
+list_t *create_node(char *str, int linecount);
+void append_node(list_t *head, list_t *node);
 int build_history_list(info_t *info, char *buf, int linecount)
 {
 list_t *node = create_node(buf, linecount);
@@ -133,6 +135,7 @@ info->history = node;
 
 return (0);
 }
+
 /**
  * renumber_history - renumbers the history linked list after changes
  * @info: Structure containing potential arguments. Used to maintain
