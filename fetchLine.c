@@ -121,7 +121,7 @@ return (n_read);
  *
  * Return: number of bytes read
  */
-ssize_t _getline(info_t *info, char **ptr, size_t *length)
+ssize_t _getline(char **ptr, size_t *length)
 {
 ssize_t nread;
 size_t size = 0;
