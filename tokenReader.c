@@ -28,10 +28,10 @@ i++;
 b = 0;
 while (!is_delim(str[i + b], d) && str[i + b])
 b++;
-s[j] = malloc((b + 1) * sizeof(char));
+s[a] = malloc((b + 1) * sizeof(char));
 if (!s[a])
 {
-for (b = 0; b < j; b++)
+for (b = 0; b < a; b++)
 free(s[b]);
 free(s);
 return (NULL);
@@ -64,7 +64,7 @@ return (NULL);
 s = malloc((1 + numwords) *sizeof(char *));
 if (!s)
 return (NULL);
-for (i = 0, a = 0; a < numwords; j++)
+for (i = 0, a = 0; a < numwords; a++)
 {
 while (str[i] == d && str[i] != d)
 i++;
@@ -74,7 +74,7 @@ b++;
 s[a] = malloc((b + 1) * sizeof(char));
 if (!s[a])
 {
-for (b = 0; b < j; b++)
+for (b = 0; b < a; b++)
 free(s[b]);
 free(s);
 return (NULL);
