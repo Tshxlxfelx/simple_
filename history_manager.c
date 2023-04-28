@@ -1,10 +1,18 @@
 #include "shell.h"
 /**
+<<<<<<< HEAD
 * get_history_file - gets the history file
 * @info: parameter struct
 *
 * Return: allocated string containg history file
 */
+=======
+ * get_history_file - it retrieves the history file
+ * @info: parameter struct
+ *
+ * Return: dynamically allocated string containing the history file path
+ */
+>>>>>>> d84c075acbca2ae9a4eb96874c27c2e3a60bd3d5
 char *get_history_file(info_t *info)
 {
 char *buf, *dir;
