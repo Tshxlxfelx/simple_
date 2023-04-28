@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * get_history_file - retrieves the history file
+ * get_history_file - it retrieves the history file
  * @info: parameter struct
  *
  * Return: dynamically allocated string containing the history file path
